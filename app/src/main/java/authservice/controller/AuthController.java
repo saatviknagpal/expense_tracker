@@ -43,5 +43,4 @@ public class AuthController
             return new ResponseEntity<>("Exception in User Service", HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-
 }
