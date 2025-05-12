@@ -1,4 +1,4 @@
-from app.utils.messageUtil import MessageUtil
+from utils.messageUtil import MessageUtil
 from app.service.llmService import LLMService
 
 class MessageService:

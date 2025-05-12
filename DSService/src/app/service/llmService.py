@@ -2,6 +2,7 @@ from dotenv import load_dotenv
 import os
 from langchain_core.prompts import ChatPromptTemplate
 from app.service.Expense import Expense
+from langchain_mistralai import ChatMistralAI
 
 class LLMService:
     def __init__(self):
@@ -18,7 +19,7 @@ class LLMService:
         ]
         )
         self.apiKey = os.getenv('OPENAI_API_KEY')
-        self.llm = ChatMistralAI(api_key=self.apiKey, model="mistral-large-latest", temperature=0)
+        self.llm = ChatMistralAI(api_key=self.apiKe, model="mistral-large-latest", temperature=0)
         self.runnable = self.prompt | self.llm.with_structured_output(schema=Expense)
 
     def runLLM(self, message):
